@@ -3,21 +3,33 @@
 
 import java.util.*;
 
-public class Solution {
+public class Prob15 {
     public int[] solution(int[] arr) {
-        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        ArrayList<Integer> temp = new ArrayList<>(Arrays.asList(arr2));
+        ArrayList<Integer> result = new ArrayList<>();
 
-        for (int i = 1; i < arr.length - 1; i++) {
-            if (arr[i - 1] == arr[i]) temp.remove(arr2[i-1]);
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] != arr[i]) result.add(arr[i - 1]);
         }
-        if (arr[arr.length - 1] == arr[arr.length - 2]) temp.remove(arr[arr.length - 2]);
-        int[] answer = new int[temp.size()];
+        if (arr[arr.length - 2] == arr[arr.length - 1]) result.add(arr[arr.length - 2]);
+        else result.add(arr[arr.length - 1]);
+        // 1122322254888
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
 
-        for (int i = 0; i < temp.size(); i++) {
-            answer[i] = temp.get(i);
+    // result에 값 넣을 때 먼저 result.add(arr[0]) 하고 for 문에서 두개 비교후 뒤에 거 넣으면 if문 안써도 됨
+    public int[] solution2(int[] arr) { // 성능 훨씬 좋음
+        ArrayList<Integer> result = new ArrayList<>();
+        int preNum = 10;
+        for (int num : arr) {
+            if (num != preNum) result.add(num);
+            preNum = num;
         }
-// 122322254888
+        int[] answer = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            answer[i] = result.get(i);
+        }
         return answer;
     }
 }
+
+// ArrayList -> int[] arraylist.stream().mapToInt(Integer::intValue).toArray();
