@@ -5,39 +5,39 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-class Solution {
+class Prob10 {
     public int[] solution(int[] arr) {
 //        sol 1
-//        if (arr.length == 1) return new int[]{-1};
-//        int min = arr[0];
-//        for (int i : arr) {
-//            if (i < min) min = i;
-//        }
-//
-//        ArrayList<Integer> temp = new ArrayList<>();
-//        for (int i: arr) {
-//            if (i == min) continue;
-//            temp.add(i);
-//        }
-//
-//        return temp.stream().mapToInt(i -> i).toArray();
+        if (arr.length == 1) return new int[]{-1};
+        int min = arr[0];
+        for (int i : arr) {
+            if (i < min) min = i;
+        }
+
+        ArrayList<Integer> temp = new ArrayList<>();
+        for (int i: arr) {
+            if (i == min) continue;
+            temp.add(i);
+        }
+
+        return temp.stream().mapToInt(i -> i).toArray();
 
 //        sol 2
-        if (arr.length == 1) return new int[]{-1};
-
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        for (int i : arr) {
-            arrayList.add(i);
-        }
-
-        Integer min = Collections.min(arrayList);
-        arrayList.remove(min);
-
-        int[] answer = new int[arr.length - 1];
-        for (int i = 0; i < arrayList.size(); i++) {
-            answer[i] = arrayList.get(i);
-        }
-        return answer;
+//        if (arr.length == 1) return new int[]{-1};
+//
+//        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+//        for (int i : arr) {
+//            arrayList.add(i);
+//        }
+//
+//        Integer min = Collections.min(arrayList);
+//        arrayList.remove(min);
+//
+//        int[] answer = new int[arr.length - 1];
+//        for (int i = 0; i < arrayList.size(); i++) {
+//            answer[i] = arrayList.get(i);
+//        }
+//        return answer;
 
     }
 }

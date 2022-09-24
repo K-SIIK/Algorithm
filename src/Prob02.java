@@ -4,7 +4,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Prob2 {
+class Prob02 {
     public int[] solution(int[] arr, int divisor) {
         ArrayList<Integer> temp = new ArrayList<>();
         for (int num : arr) {

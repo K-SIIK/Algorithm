@@ -1,15 +1,15 @@
 //정수 제곱근 판별
 //n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1을 리턴하는 함수를 완성
 
-class Prob9 {
+class Prob09 {
     public long solution(long n) {
 //        sol 1
-//        if (Math.pow((long) Math.sqrt(n), 2) == n) return (long) Math.pow(Math.sqrt(n) + 1, 2);
-//        else return -1;
+        if (Math.pow((long) Math.sqrt(n), 2) == n) return (long) Math.pow(Math.sqrt(n) + 1, 2);
+        else return -1;
 
 //    sol 2
-        double sqrt = Math.sqrt(n);
-        return Math.floor(sqrt) == sqrt ? (long) Math.pow(sqrt + 1, 2) : -1;
+//        double sqrt = Math.sqrt(n);
+//        return Math.floor(sqrt) == sqrt ? (long) Math.pow(sqrt + 1, 2) : -1;
     }
 }
 

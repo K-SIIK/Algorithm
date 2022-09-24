@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
+
 // =====================================     못품        =============================
-class Prob4 {
+class Prob04 {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
 
