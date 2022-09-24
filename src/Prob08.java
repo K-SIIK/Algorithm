@@ -6,20 +6,21 @@ import java.util.Comparator;
 
 class Prob08 {
     public long solution(long n) {
-//        sol 1
 //        n을 String배열에 넣은 후 reverseorder해서 다시 ParseLong
 //        String.join 함수로 String[] -> String
         String[] strArr = (n + "").split("");
         Arrays.sort(strArr, Comparator.reverseOrder());
         long answer = Long.parseLong(String.join("", strArr));
         return answer;
+    }
 
+    public long solution2(long n) {
 //        sol 2 성능 더 좋음
 //        char[] 오름차순 Arrays.sort 하고 StringBuffer로 내림차순 reverse
-//        char[] charArr = Long.toString(n).toCharArray();
-//        Arrays.sort(charArr);
-//        StringBuffer rev = new StringBuffer(String.valueOf(charArr));
-//        return Long.parseLong(rev.reverse().toString());
+        char[] charArr = Long.toString(n).toCharArray();
+        Arrays.sort(charArr);
+        StringBuffer rev = new StringBuffer(String.valueOf(charArr));
+        return Long.parseLong(rev.reverse().toString());
     }
 }
 

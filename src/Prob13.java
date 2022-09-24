@@ -3,7 +3,6 @@
 
 class Prob13 {
     public int solution(int n) {
-//        sol 1
 //        StringBuilder 리버스 함수로 뒤집은후 10진법
         int answer = 0;
         StringBuilder third = new StringBuilder();
@@ -13,21 +12,21 @@ class Prob13 {
         }
         third.reverse();
 
-        for (int i=0; i<third.length(); i++) {
+        for (int i = 0; i < third.length(); i++) {
             answer += (third.charAt(i) - '0') * (int) (Math.pow(3, i));
         }
-
         return answer;
+    }
 
-//        sol 2
-//        StringBuilder stringBuilder = new StringBuilder();
-//        String str = "";
-//        while (n != 0) {
-//            str += n % 3 + "";
-//            n /= 3;
-//        }
-//        str = new StringBuilder(str).reverse().toString();
-//        return Integer.parseInt(str, 3);
+    public int solution2(int n) {
+        StringBuilder stringBuilder = new StringBuilder();
+        String str = "";
+        while (n != 0) {
+            str += n % 3 + "";
+            n /= 3;
+        }
+        str = new StringBuilder(str).reverse().toString();
+        return Integer.parseInt(str, 3);
     }
 }
 

@@ -4,9 +4,7 @@
 //3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, ...
 // 가장 많은 문제를 맞힌 사람이 누구인지 배열에 담아 return
 
-
 import java.util.ArrayList;
-
 class Prob18 {
     public int[] solution(int[] answers) {
         int[] supo1 = {1, 2, 3, 4, 5};

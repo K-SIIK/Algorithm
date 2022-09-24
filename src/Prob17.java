@@ -1,8 +1,6 @@
 // 로또의 최고 순위와 최저 순위
 // 당첨 가능한 최고 순위와 최저 순위를 차례대로 배열에 담아서 return
 
-import java.util.Arrays;
-
 class Prob17 {
     public int[] solution(int[] lottos, int[] win_nums) {
         int[] answer = new int[2];
