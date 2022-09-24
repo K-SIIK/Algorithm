@@ -1,11 +1,10 @@
 // 3진법 뒤집기
 // n을 3진법 상에서 앞뒤로 뒤집은 후, 이를 다시 10진법으로 표현한 수를 return
 
-import javafx.beans.binding.StringBinding;
-
 class Prob13 {
     public int solution(int n) {
 //        sol 1
+//        StringBuilder 리버스 함수로 뒤집은후 10진법
         int answer = 0;
         StringBuilder third = new StringBuilder();
         while (n != 0) {

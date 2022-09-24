@@ -2,12 +2,11 @@
 //예를들어 arr이 [4,3,2,1]인 경우는 [4,3,2]를 리턴 하고, [10]면 [-1]을 리턴 합니다.
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
 class Prob10 {
     public int[] solution(int[] arr) {
 //        sol 1
+//        배열내 최솟값 찾은 후 , 다시 for문 돌려서 최솟값은 패스하고 나머지 저장
         if (arr.length == 1) return new int[]{-1};
         int min = arr[0];
         for (int i : arr) {
@@ -23,6 +22,7 @@ class Prob10 {
         return temp.stream().mapToInt(i -> i).toArray();
 
 //        sol 2
+//        ArrayList로 저장 후 Collections.min 함수 써서 최솟값찾아서 제거
 //        if (arr.length == 1) return new int[]{-1};
 //
 //        ArrayList<Integer> arrayList = new ArrayList<Integer>();

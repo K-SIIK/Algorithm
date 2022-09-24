@@ -4,17 +4,17 @@
 class Prob07 {
     public int[] solution(long n) {
 //        sol 1
+//        StringBuffer의 reverse함수 이용해서 뒤집고 for 문으로 parseInt
         StringBuffer temp = new StringBuffer(n + "");
         String reverse = temp.reverse().toString();
         int[] answer = new int[reverse.length()];
-
         for (int i = 0; i < reverse.length(); i++) {
             answer[i] = Integer.parseInt(reverse.charAt(i) + "");
         }
-
         return answer;
 
 //        sol 2
+//        while문으로 n%10 값을 배열에 넣기
 //        String temp = n + "";
 //        int[] answer = new int[temp.length()];
 //        int idx = 0;

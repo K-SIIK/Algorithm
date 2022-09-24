@@ -4,10 +4,12 @@
 class Prob09 {
     public long solution(long n) {
 //        sol 1
+//       long 타입의 제곱근의 제곱이 제곱수와 같으면 n+1 제곱 리턴
         if (Math.pow((long) Math.sqrt(n), 2) == n) return (long) Math.pow(Math.sqrt(n) + 1, 2);
         else return -1;
 
 //    sol 2
+//        제곱근의 내림이 제곱근과 같으면 n+1 리턴
 //        double sqrt = Math.sqrt(n);
 //        return Math.floor(sqrt) == sqrt ? (long) Math.pow(sqrt + 1, 2) : -1;
     }
