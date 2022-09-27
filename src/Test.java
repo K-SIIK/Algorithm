@@ -1,5 +1,12 @@
+import java.util.Collections;
+import java.util.HashSet;
+
 public class Test {
     public static void main(String[] args) {
-        StringBuffer stringBuffer = new StringBuffer("onetwothreeone");
+        char c = '1';
+        String s = c  +"";
+        System.out.println(s);
+
+
     }
 }

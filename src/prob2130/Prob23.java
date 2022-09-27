@@ -1,7 +1,7 @@
 package prob2130;// 시저 암호
 // 문자열 s와 거리 n을 입력받아 s를 n만큼 민 암호문을 만드는 함수
 
-class Solution {
+class Prob23 {
     public String solution(String s, int n) {
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         String alphabetC = alphabet.toUpperCase();
