@@ -1,8 +1,7 @@
-// 폰켓몬
+package prob3140;// 폰켓몬
 // 당신은 최대한 다양한 종류의 폰켓몬을 가지길 원하기 때문에, 최대한 많은 종류의 폰켓몬을 포함해서 N/2마리
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 
 class Prob34 { // 1점
