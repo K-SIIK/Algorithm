@@ -5,7 +5,7 @@ package prob3140;
 import java.util.Arrays;
 import java.util.Collections;
 
-class Solution { // 9점
+class Prob32 { // 9점
     public int[] solution(int N, int[] stages) {
         int[] answer = new int[N];
         String[] failRate = new String[N];
